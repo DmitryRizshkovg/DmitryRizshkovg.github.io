@@ -8,7 +8,7 @@
 <body id="body" style="background-color:#000000;margin: 0px;overflow: hidden;">
 
 <a-assets>
-<a-asset-item id="arcode" src="dino.glb">
+<a-asset-item id="arcode" src="/dino_low.gltf">
 </a-asset-item>
 </a-assets>
 <a-marker preset="custom" type="pattern" url="pattern-webar.patt" smooth="true" smoothCount="2" smoothTolerance="0.01" smoothThreshold="2" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
@@ -22,9 +22,8 @@
 
 <!-- Use it like any other HTML element -->
 
-<model-viewer ar ar-modes="scene-viewer quick-look webxr" camera-controls auto-rotate max-camera-orbit="Infinity auto 500%" ios-src="/dino.usdz" src="/dino.usdz" poster="/MYPOSTER.jpg" alt="description" quick-look-browsers="safari chrome" shadow-intensity="1" style="width: 600px; height: 300px;">
-
-
+<model-viewer ar ar-modes="scene-viewer quick-look webxr" camera-controls auto-rotate max-camera-orbit="Infinity auto 500%" 
+    ios-src="/dino.usdz" src="/dino_low.gltf" alt="description" quick-look-browsers="safari chrome" shadow-intensity="1" style="width: 600px; height: 300px;">
 </model-viewer>
 
 </body>
