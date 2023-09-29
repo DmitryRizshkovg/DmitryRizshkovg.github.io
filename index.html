@@ -524,15 +524,17 @@
     <div id="splash" style="display: none;">
     <div class="loading"></div>
     </div>
-    <a-scene gltf-model="dracoDecoderPath: https://ar-code.com/threejs2/examples/jsm/libs/draco/gltf/;" embedded="" tracking-pattern="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; patternRatio: 0.65;" device-orientation-permission-ui="enabled: false" loading-screen="enabled: false" renderer="colorManagement: true; physicallyCorrectLights: false; logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector="" id="scene" inspector="" keyboard-shortcuts="" screenshot="">
+    <a-scene gltf-model="dracoDecoderPath: /threejs2/examples/jsm/libs/draco/gltf/;" embedded="" tracking-pattern="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; patternRatio: 0.65;" device-orientation-permission-ui="enabled: false" loading-screen="enabled: false" renderer="colorManagement: true; physicallyCorrectLights: false; logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector="" id="scene" inspector="" keyboard-shortcuts="" screenshot="">
     <a-assets>
     <a-asset-item id="arcode" src="/dino_low.gltf">
     </a-asset-item>
     </a-assets>
+    
     <a-marker preset="custom" type="pattern" url="/pattern-webar.patt" smooth="true" smoothcount="2" smoothtolerance="0.01" smooththreshold="2" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA" material="" arjs-anchor="" arjs-hit-testing="">
     <a-entity id="bowser-model" gltf-model="#arcode" position="0 0 0" scale="4 4 4" class="clickable" animation-mixer="" gesture-handler="">
     </a-entity>
     </a-marker>
+
     <a-entity camera=""></a-entity>
     <canvas class="a-canvas" data-aframe-canvas="true" data-engine="three.js r147" width="1920" height="1440"></canvas><a-entity light="" data-aframe-default-light="" aframe-injected=""></a-entity><a-entity light="" position="" data-aframe-default-light="" aframe-injected=""></a-entity></a-scene>
     <div id="infotext">Point your device's camera at the AR Code. 1 finger to rotate, 2 fingers to resize.</div>
@@ -540,18 +542,19 @@
     <div id="immersivebutton">
     <model-viewer ar="" src="/dino_low.gltf" ar-modes="webxr" ar-scale="auto" bounds="tight" enable-pan="" reveal="manual" ar-status="not-presenting">
     <button id="buttonar" slot="ar-button">
-    <img src="https://ar-code.com/images/immersive.png" width="150px">
+    <img src="/immersive.png" width="150px">
     </button>
     </model-viewer>
     </div>
 
     <div id="switchcamera">
-    <div class="controls">
-    <select id="selectcamera" hidden=""><option value="" disabled="">Select a camera</option><option value="0fdd45d4b0d503017a4b2ddbd26e6c719b1520e1a56a5bb49b5049f856ddafb1">FaceTime HD Camera (3A71:F4B5)</option></select>
-    <button id="buttoncamera">Switch Camera</button>
-    <script src="/cameraswitch.js"></script>
+        <div class="controls">
+        <select id="selectcamera" hidden=""><option value="" disabled="">Select a camera</option><option value="0fdd45d4b0d503017a4b2ddbd26e6c719b1520e1a56a5bb49b5049f856ddafb1">FaceTime HD Camera (3A71:F4B5)</option></select>
+        <button id="buttoncamera">Switch Camera</button>
+        <script src="/cameraswitch.js"></script>
+        </div>
     </div>
-    </div>
+
     <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon="{&quot;rayId&quot;:&quot;80e76879ebfa091c&quot;,&quot;token&quot;:&quot;eaf6448ecc3f4348a6ccb59ca8dae526&quot;,&quot;version&quot;:&quot;2023.8.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
     
     <video autoplay="" muted="" playsinline="" id="arjs-video" style="width: 1153.33px; height: 865px; position: absolute; top: 0px; left: 0px; z-index: -2; margin-left: -79.6667px; margin-top: 0px;"></video></body></html>
