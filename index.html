@@ -3,20 +3,25 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
-<title>ARDino</title>
+<title>AR</title>
+
+<script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+<script src="https://google-ar.github.io/three.ar.js/dist/three.ar.js"></script>
+<script src="https://rawgit.com/chenzlabs/aframe-ar/827e9db/dist/aframe-ar.min.js"></script>
+
 </head>
 <body id="body" style="background-color:#000000;margin: 0px;overflow: hidden;">
 
+<a-scene gltf-model="dracoDecoderPath: https://ar-code.com/threejs2/examples/jsm/libs/draco/gltf/;" embedded="" tracking-pattern="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; patternRatio: 0.65;" device-orientation-permission-ui="enabled: false" loading-screen="enabled: false" renderer="colorManagement: true; physicallyCorrectLights: false; logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector="" id="scene" inspector="" keyboard-shortcuts="" screenshot="">
 <a-assets>
 <a-asset-item id="arcode" src="/dino_low.gltf">
 </a-asset-item>
 </a-assets>
-<a-marker preset="custom" type="pattern" url="pattern-webar.patt" smooth="true" smoothCount="2" smoothTolerance="0.01" smoothThreshold="2" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-<a-entity id="bowser-model" gltf-model="#arcode" position="0 0 0" scale="4 4 4" class="clickable" animation-mixer gesture-handler>
+<a-marker preset="custom" type="pattern" url="https://ar-code.com/logo/pattern-webar.patt" smooth="true" smoothcount="2" smoothtolerance="0.01" smooththreshold="2" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA" material="" arjs-anchor="" arjs-hit-testing="">
+<a-entity id="bowser-model" gltf-model="#arcode" position="0 0 0" scale="4 4 4" class="clickable" animation-mixer="" gesture-handler="">
 </a-entity>
 </a-marker>
-<a-entity camera></a-entity>
-</a-scene>
+<a-entity camera=""></a-entity>
 
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
@@ -25,6 +30,7 @@
 <model-viewer ar ar-modes="scene-viewer quick-look webxr" camera-controls auto-rotate max-camera-orbit="Infinity auto 500%" 
     ios-src="/dino.usdz" src="/dino_low.gltf" alt="description" quick-look-browsers="safari chrome" shadow-intensity="1" style="width: 600px; height: 300px;">
 </model-viewer>
+
 
 </body>
 </html>
